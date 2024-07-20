@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Dancing+Script:wght@400..700&family=Edu+TAS+Beginner:wght@400..700&family=Metal&family=Nanum+Pen+Script&family=Protest+Riot&display=swap');
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(210, 229, 246);
+    width: 100%;
+   }
+nav {
+    display: flex;
+    width: 100%;
+}
+
+a{
+text-decoration: none;
+}
+
+header ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+header ul li{
+    margin: 30px;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(1, 46, 76);
+    text-decoration: none;
+}
+
+img{
+    width: 250px;
+}
+
+.phrase{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align:center 
+    
+ }
+ 
+ .phrase h1{
+    width: 70%;
+    padding: 15px;
+    font-family: "Bad Script", cursive;
+    color: black;
+    font-size: 40px;
+ }
+ 
+ .phrase h2{
+    font-family: "Bad Script", cursive;
+    color: rgb(1, 59, 94);
+    font-size: 30px;
+ }
+ 
+
+#sobre{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgb(42, 81, 123);
+}
+
+#sobre iframe{
+    padding: 40px;
+    margin: 40px;
+}
