@@ -1,71 +1,204 @@
 @import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Dancing+Script:wght@400..700&family=Edu+TAS+Beginner:wght@400..700&family=Metal&family=Nanum+Pen+Script&family=Protest+Riot&display=swap');
-header{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background-color: rgb(210, 229, 246);
-    width: 100%;
-   }
-nav {
-    display: flex;
-    width: 100%;
+
+/* Establecer box-sizing global */
+*,
+*::before,
+*::after {
+    box-sizing: border-box; /* Incluye padding y borde en el ancho total */
 }
 
-a{
-text-decoration: none;
+/* Variables generales para facilitar la gestión de colores */
+:root {
+    --color-primario: #d2e5f6; /* Color de fondo principal */
+    --color-secundario: #082249; /* Color de texto principal */
+    --color-terciario: #012e4c; /* Color secundario */
+    --color-cuaternario: #F2F2F2; /* Color de fondo alternativo */
+    --color-quinario: #000000; /* Color negro para texto */
 }
 
-header ul{
-    list-style: none;
-    display: flex;
-    flex-direction: row;
+/* Reiniciar padding y margin para todos los elementos */
+* {
+    padding: 0; /* Elimina el espaciado interno por defecto */
+    margin: 0; /* Elimina el margen por defecto */
 }
 
-header ul li{
-    margin: 30px;
-    font-size: 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: rgb(1, 46, 76);
-    text-decoration: none;
+/* Estilos para el encabezado */
+header {
+    background-color: var(--color-primario); /* Color de fondo del header */
+    padding: 1.25rem; /* Espaciado interno */
 }
 
-img{
-    width: 250px;
+/* Estilos de la barra de navegación */
+.navbar ul {
+    list-style-type: none; /* Sin viñetas en la lista */
+    padding: 0.625rem; /* Espaciado interno de la lista */
+    margin: 0.625rem; /* Margen alrededor de la lista */
+    display: flex; /* Disposición en fila */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
 }
 
-.phrase{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align:center 
-    
- }
- 
- .phrase h1{
-    width: 70%;
-    padding: 15px;
-    font-family: "Bad Script", cursive;
-    color: black;
-    font-size: 40px;
- }
- 
- .phrase h2{
-    font-family: "Bad Script", cursive;
-    color: rgb(1, 59, 94);
-    font-size: 30px;
- }
- 
-
-#sobre{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    background-color: rgb(42, 81, 123);
+.navbar li {
+    margin-right: 3.125rem; /* Espacio entre elementos de la lista */
 }
 
-#sobre iframe{
-    padding: 40px;
-    margin: 40px;
+/* Agrupar para crear estilos similares */
+.navbar a,
+.footer-links a {
+    color: var(--color-secundario); /* Color del texto de los enlaces */
+    text-decoration: none; /* Sin subrayado */
+    font-size: x-large; /* Tamaño de fuente grande */
+    transition: color 0.3s; /* Transición para el efecto hover */
+}
+
+.navbar a:hover,
+.footer-links a:hover {
+    text-decoration: underline; /* Subrayado al pasar el ratón */
+}
+
+/* Estilos de imagen */
+img {
+    width: 15.625rem; /* Ancho fijo de las imágenes */
+}
+
+/* Estilos para frases o secciones destacadas */
+.phrase {
+    max-width: 100%; /* Ancho máximo del contenedor */
+    display: flex; /* Usar flexbox para centrar */
+    flex-direction: column; /* Colocar elementos en columna */
+    align-items: center; /* Centrar horizontalmente */
+    text-align: center; /* Centrar texto */
+    padding: 1.875rem; /* Espaciado interno */
+}
+
+.phrase h1 {
+    width: 70%; /* Ancho del título */
+    padding: 0.9375rem; /* Espaciado interno */
+    font-family: "Bad Script", cursive; /* Fuente personalizada */
+    color: var(--color-quinario); /* Color del texto */
+    font-size: 2.5rem; /* Tamaño de fuente grande */
+}
+
+.phrase h2 {
+    font-family: "Bad Script", cursive; /* Fuente personalizada */
+    color: var(--color-terciario); /* Color del texto */
+    font-size: 1.875rem; /* Tamaño de fuente mediano */
+}
+
+/* Estilos para el contenedor de contenido */
+.contenido {
+    max-width: 100%; /* Ancho máximo */
+    display: flex; /* Usar flexbox para disposición */
+    flex-direction: row; /* Disposición en fila */
+    align-items: flex-start; /* Alinear al inicio */
+    text-align: center; /* Centrar texto */
+    margin: 1.875rem; /* Margen alrededor */
+}
+
+/* Estilos del contenedor del carrusel */
+.carousel-container {
+    width: 80%; /* Ancho del contenedor */
+    margin: 2rem; /* Margen para centrar */
+    }
+
+/* Estilos para la sección "sobre" */
+#sobre {
+    width: 100%; /* Ancho total */
+    display: flex; /* Usar flexbox */
+    flex-direction: row; /* Disposición en fila */
+    align-items: center; /* Alinear elementos al centro */
+    background-color: var(--color-terciario); /* Color de fondo */
+}
+
+#sobre iframe {
+    padding: 1.875rem; /* Espaciado interno */
+    margin: 2rem; /* Margen alrededor */
+}
+
+/* Estilos para la sección de contacto */
+.contacto {
+    width: 100%; /* Ancho total */
+    display: flex; /* Usar flexbox */
+    flex-direction: column; /* Disposición en columna */
+    align-items: center; /* Centrar elementos */
+    padding: 1.875rem; /* Espaciado interno */
+}
+
+/* Estilos para el formulario de contacto */
+.contacto__formulario {
+    max-width: 25rem; /* Ancho máximo del formulario */
+    margin: 0 auto; /* Centrar el formulario en la página */
+}
+
+/* Estilos para los campos de entrada en el formulario */
+.contacto__campo {
+    width: 100%; /* Cada campo ocupará el 100% del ancho */
+    padding: 0.625rem; /* Espaciado interno */
+    margin: 0.625rem 0; /* Espaciado vertical entre campos */
+}
+
+/* Estilos específicos para el textarea */
+.contacto__campo--textarea {
+    height: 6.25rem; /* Altura del textarea */
+}
+
+/* Estilos para el botón del formulario */
+.contacto__boton {
+    padding: 0.625rem 1.25rem; /* Espaciado interno */
+    background-color: var(--color-secundario); /* Color de fondo del botón */
+    color: #fff; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 0.5rem; /* Esquinas redondeadas */
+    cursor: pointer; /* Cambia el cursor al pasar el ratón */
+    transition: background-color 0.3s, transform 0.3s; /* Transición suave */
+}
+
+.contacto__boton:hover {
+    background-color: var(--color-primario); /* Cambiar color al pasar el ratón */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+}
+
+/* Estilos para el pie de página */
+footer {
+    background-color: var(--color-terciario); /* Color de fondo del footer */
+    color: var(--color-cuaternario); /* Color del texto */
+    padding: 1.25rem; /* Espaciado interno */
+    text-align: center; /* Centrar texto */
+}
+
+/* Estilos para la sección de redes sociales */
+.social-media {
+    margin-bottom: 0.625rem; /* Espaciado inferior */
+}
+
+/* Estilos para los enlaces de redes sociales */
+.social-media a {
+    margin: 0 0.9375rem; /* Espaciado horizontal entre íconos */
+    color: var(--color-cuaternario); /* Color de los íconos */
+    font-size: 1.5rem; /* Tamaño de los íconos */
+    transition: color 0.3s; /* Transición para el efecto hover */
+    text-decoration: none; /* Sin subrayado */
+}
+
+.social-media a:hover {
+    color: #d2e5f6; /* Cambiar color al pasar el ratón */
+}
+
+/* Estilos para los enlaces del pie de página */
+.footer-links {
+    margin-top: 0.625rem; /* Espaciado superior */
+}
+
+.footer-links a {
+    color: var(--color-cuaternario); /* Color de texto de los enlaces */
+    margin: 0 0.9375rem; /* Espaciado horizontal entre enlaces */
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+    .navbar li {
+        margin-right: 1.25rem; /* Espacio reducido en pantallas pequeñas */
+    }
+    .contacto__formulario {
+        max-width: 100%; /* Permitir que el formulario ocupe el ancho total en móviles */
+    }
 }
